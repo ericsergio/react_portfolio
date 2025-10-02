@@ -31,10 +31,11 @@ export default function About() {
 
     const desktopID = {
         position:'absolute',
-        bottom:'5vh',
-        left:'35vw',
+        bottom:'0',
+        left:'45vw',
         fontSize:'3em',
         color:'red',
+        zIndex:-1
     }
     return (
         <div className = 'About' style = {aboutStyle}>

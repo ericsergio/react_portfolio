@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import '../../App.css';
+
 export default function Examples({options, onExampleSelected}) {
+    const pDescriptionStyle = {        
+        fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+        padding:'2% 5%',
+        marginLeft:'5%',
+        backgroundColor:'rgba(16, 15, 4, 0.4)',
+        width:'90%',
+        fontWeight:'bold',
+        color:'rgba(239, 236, 236, 1)',
+    }
+
     const examplesStyle = {
-        height:'75%',
-        width:'5%'        
+        height:'100%',
+        width:'100%',
+        position:'absolute',        
+        left:'calc(0vw)'        
     }
 
     const selectedImgImg = {
@@ -13,14 +27,23 @@ export default function Examples({options, onExampleSelected}) {
         left:`0`,
         height:'100%',
         width:'100%',
-        border:'solid orange 5px'
+        border:'solid orange 5px',
+        zIndex:7
     }
 
     const dropDownStyle = {
+        marginLeft:'5%',
         padding:'10px',
-        borderRadius:'25px',
-        outline:'4px solid blue',
-        zIndex:'7'
+        borderRadius:'15px',
+        outline:'ridge rgba(233, 235, 240, 1) 10px',
+        border:'ridge rgba(23, 31, 57, 1) 12px',
+        width:'90%',
+        textAlign:'center',
+        zIndex:2,
+        fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+        fontFamily: '"Chivo", sans-serif',
+        fontFamily: '"Exo 2", sans-serif',
+        fontFamily: '"Space Mono", monospace', 
         /*transform: 'translateY(-50%)'
         content: '▼'*/
     }
@@ -38,7 +61,7 @@ export default function Examples({options, onExampleSelected}) {
         background: 'linear-gradient(to top,rgb(169, 208, 220) 0%,rgb(119, 123, 166) 80%)',
         boxShadow:'5px 5px rgba(70, 123, 150, 0.6)',
         textAlign:'center',
-        zIndex:0
+        zIndex:7
     }
 
     const [selectedExample, setSelectedExample] = useState('');
@@ -49,6 +72,7 @@ export default function Examples({options, onExampleSelected}) {
         if(onExampleSelected) {
             onExampleSelected(newValue)            
         }
+        
     };
 
     const selectedExampleData = options.find(option => option.value === selectedExample);
@@ -59,8 +83,16 @@ export default function Examples({options, onExampleSelected}) {
 
     return (
         <div className = 'Examples' style = {examplesStyle}>
-            <p>one two three</p>
+            <p style = {pDescriptionStyle}>
+              These examples are code snippets of various projects that 
+              show my contributions/work. This section is intended to 
+              provide some insight of my coding ability/skills using 
+              various languages. Unless I make a note saying otherwise, 
+              everything included here is code that I originally wrote, 
+              Click on the heading to display each example snippet.
+            </p>
             <select
+            className = 'dropdown-container'
             style = {dropDownStyle}
             id = "example-select"
             value={selectedExample}
@@ -68,7 +100,7 @@ export default function Examples({options, onExampleSelected}) {
             >
                 <option value="" disabled>Example Code Snippets</option>
                 {options.map((option) => (
-                    <option key={option.value} value = {option.value}>
+                    <option className = 'dropdown-content' key={option.value} value = {option.value}>
                         {option.label}
                         </option>
                 ))}

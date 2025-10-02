@@ -4,7 +4,7 @@ export default function Resume() {
     const resumeStyle = {
         height:'100%',
         width:'100%',
-        backgroundColor:'rgb(255,255,255)',
+        backgroundColor:'rgba(159, 167, 109, 1)',
 		color:'rgb(0,0,0)',
 		overflow:'auto',
 		padding:'2%'

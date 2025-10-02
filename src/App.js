@@ -30,7 +30,7 @@ function App() {
 
   const isMobile = width < breakpoint ? true : false;
 
-  console.log(isMobile);
+  //console.log(isMobile);
   const topBarStyle = {
     margin:'0',
     backgroundColor:'rgb(40, 162, 184)'
@@ -40,21 +40,13 @@ function App() {
     position:'absolute',
     top:'16vh',
     left:'11vw',    
-    height:'70vh',
+    minHeight:'70vh',
     width:'78vw',
     boxShadow:'0 30px 20px rgba(0, 0, 0, 0.7)',
     borderRadius:'0 12% 0 0',
     background:'radial-gradient(circle at 90% 5%, rgba(0, 0, 0, 1) 2%, transparent 95%) 90% 25%, \
     radial-gradient(circle at 55% 5%, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, .7) 90%) 25% 5%, \
     radial-gradient(circle at 85% 55%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, .7) 90%) 5% 25%' 
-  }
-
-  const pDescriptionStyle = {
-    fontSize:'1.4em',
-    fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
-    color:'#fff',
-    padding:'3% 8%',
-    fontWeight:'bold'
   }
 
   const dropDownStyle = {
@@ -87,18 +79,11 @@ function App() {
         return isMobile ? <MobileAbout /> : <DesktopAbout />
         //return <DesktopAbout />
       case 'resume':
-        return <DesktopResume />
+        return isMobile ? <MobileResume /> : <DesktopResume />
+        //return <DesktopResume />
       case 'examples':
         return( 
         <div>
-          <p style = {pDescriptionStyle}>
-            These examples are code snippets of various projects that 
-            show my contributions/work. This section is intended to 
-            provide some insight of my coding ability/skills using 
-            various languages. Unless I make a note saying otherwise, 
-            everything included here is code that I originally wrote, 
-            Click on the heading to display each example snippet.
-          </p>
           <DesktopExamples          
             options={examples}
             onExampleSelected = {handleExampleSelection}          
