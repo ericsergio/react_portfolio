@@ -27,6 +27,7 @@ export default function Nav(props) {
         top:'25%',
         font: 'clamp(0.6rem, 2.5vw, 3rem) bold Grey',
         color:'rgb(255,255,255)',
+        cursor:'pointer',
     }
 
     return(
