@@ -13,7 +13,7 @@ export default function About() {
         color:'rgb(255, 255, 255',
         fontSize:'1.3em',
         padding:'2%',
-        width: 'calc(100% - 12vw)',
+        width: 'calc(100% - 25vw)',
         margin: '6% 0 0 4%'
     }
     const pStyleLower = {
@@ -23,11 +23,18 @@ export default function About() {
         margin: '2% 1% 2% 6%'
     }
     const meImgStyle = {
+        /*.68*/
         position:'absolute',
         top:'0%',
         right:'0%',
-        maxHeight:'calc(13vw)',
+        aspectRatio:'0.68 / 1',
+        maxHeight:'20vh',
+        minHeight:'17vh',
+        
+        /*maxHeight:'calc(21vh)',
         maxWidth:'calc(13vw)',
+        minHeight:'calc(15vh)',
+        minWidth:'calc(12vw)',*/
         borderRadius:'0 30% 0 30%',
         zIndex:'6'
     }

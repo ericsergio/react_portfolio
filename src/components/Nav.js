@@ -99,7 +99,10 @@ export default function Nav(props) {
                             <li
                             key = {item}
                             style = {pgLinks_Li_Mobile}
-                            onClick = {() => props.onNavigate(item)}
+                            onClick = {() => { 
+                                props.onNavigate(item);
+                                toggleMenu();
+                            }}
                             >
                             {item}
                             </li>
