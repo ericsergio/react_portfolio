@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import ordersIcon from '../../../src/assets/ordersImg.png';
-import ticTacToeIcon from '../../../src/assets/tictactoeImg.png';
-import slotMachineIcon from '../../../src/assets/slotMachineImg.png';
-import reclaimIcon from '../../../src/assets/reclaimImg.png';
+import ordersIcon from '../../src/assets/ordersImg.png';
+import ticTacToeIcon from '../../src/assets/tictactoeImg.png';
+import slotMachineIcon from '../../src/assets/slotMachineImg.png';
+import reclaimIcon from '../../src/assets/reclaimImg.png';
+import useWindowSize from './useWindowSize';
 
 export default function Projects() {
+
+
     const projectsStyle = {
         height:'75%',
         width:'100%'        
@@ -48,7 +51,7 @@ export default function Projects() {
         <div className = 'Projects' style = {projectsStyle}>
             <ul style = {projListStyle}>
                 <li style = {projListLi}>
-                    <a href = "https://ericdsergio.webhop.me/Pages/orders/index.html" style = {projListLiA}>Orders
+                    <a href = "https://ericdsergio.webhop.me/Pages/orders/index.html" style = {projListLiA}>Inventory Management
                     <img style = {projIcon} src={ordersIcon} alt = "Order App icon" /></a>
                     </li>
                 <li style = {projListLi}>

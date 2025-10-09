@@ -6,34 +6,23 @@ import useWindowSize from './components/useWindowSize';
 import './App.css';
 
 import {   
-  About as DesktopAbout,
-  Resume as DesktopResume,
-  Examples as DesktopExamples,
-  Projects as DesktopProjects,
-  Contact as DesktopContact,
-} from './components/desktop';
+  About,
+  Resume,
+  Examples,
+  Projects,
+  Contact,
+} from './components';
 
-import {   
-  About as MobileAbout,
-  Resume as MobileResume,
-  Examples as MobileExamples,
-  Projects as MobileProjects,
-  Contact as MobileContact,
-} from './components/mobile';
-
+import ordersProc from './assets/exampleImages/ordersProc.png';
+import randQuestionProc from './assets/exampleImages/randQuestionProc.png';
+import phpWide from './assets/exampleImages/phpWide.png';
+import cSharpWide from './assets/exampleImages/cSharpWide.png';
+import restAPIWide from './assets/exampleImages/restAPIWide.png';
 
 function App() {
-
-  const { width } = useWindowSize();
-
-  const breakpoint = 768;
-
-  const isMobile = width < breakpoint ? true : false;
-
-  //console.log(isMobile);
   const topBarStyle = {
     margin:'0',
-    backgroundColor:'rgb(40, 162, 184)'
+    height:'100vh',
   }
 
   const pageContainerStyle = {
@@ -46,7 +35,7 @@ function App() {
     borderRadius:'0 12% 0 0',
     background:'radial-gradient(circle at 90% 5%, rgba(0, 0, 0, 1) 2%, transparent 95%) 90% 25%, \
     radial-gradient(circle at 55% 5%, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, .7) 90%) 25% 5%, \
-    radial-gradient(circle at 85% 55%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, .7) 90%) 5% 25%' 
+    radial-gradient(circle at 85% 55%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, .7) 90%) 5% 25%',
   }
 
   const dropDownStyle = {
@@ -66,36 +55,36 @@ function App() {
   }
 
   const examples = [
-    { value:'ordersProc', label:'SQL Procedure',imageUrl: '/assets/exampleImages/ordersProc.png' },
-    { value:'randQuestionProc', label:'Random Question SQL Procedure',imageUrl: '/assets/exampleImages/randQuestionProc.png' },
-    { value:'phpWide', label:'PHP',imageUrl: '/assets/exampleImages/phpWide.png' },
-    { value:'cSharpWide', label:'C#',imageUrl: '/assets/exampleImages/cSharpWide.png' },
-    { value:'restAPIWide', label:'Rest API',imageUrl: '/assets/exampleImages/restAPIWide.png' }
+    { value:'ordersProc', label:'SQL Procedure',imageUrl: ordersProc },
+    { value:'randQuestionProc', label:'Random Question SQL Procedure',imageUrl: randQuestionProc },
+    { value:'phpWide', label:'PHP',imageUrl: phpWide },
+    { value:'cSharpWide', label:'C#',imageUrl: cSharpWide },
+    { value:'restAPIWide', label:'Rest API',imageUrl: restAPIWide }
   ]
 
   const renderActivePage = () => {
     switch(activePage) {
       case 'about':
-        return isMobile ? <MobileAbout /> : <DesktopAbout />
-        //return <DesktopAbout />
+        //return isMobile ? <MobileAbout /> : <DesktopAbout />
+        return <About />
       case 'resume':
-        return isMobile ? <MobileResume /> : <DesktopResume />
-        //return <DesktopResume />
+        //return isMobile ? <MobileResume /> : <DesktopResume />
+        return <Resume />
       case 'examples':
         return( 
         <div>
-          <DesktopExamples          
+          <Examples          
             options={examples}
             onExampleSelected = {handleExampleSelection}          
            />
            </div>
         )
       case 'projects':
-        return <DesktopProjects />
+        return <Projects />
       case 'contact':
-        return <DesktopContact />
+        return <Contact />
       default:
-        return <DesktopAbout />
+        return <About />
     }
   };
 

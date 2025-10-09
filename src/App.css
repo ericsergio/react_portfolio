@@ -31,19 +31,16 @@
 html, body {
   /*overflow: hidden;*/
   background-image:url("https://ericdsergio.webhop.me/assets/woodSculpture.png");
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-size: calc(55vw); /* Scale the image to cover the entire element */
+  background-position: 0% 25% ; /* Center the image within the element */
+  background-attachment: fixed; /* (Optional) Fix the background relative to the viewport */
 }
+
 
 * {
   box-sizing: border-box;
   font-size:clamp(.6rem, 2vh, 1.5rem);
-}
-
-body {
-
-}
-
-.App {
-
 }
 
 /*.TopBar {
@@ -87,6 +84,9 @@ body {
   z-index:10;
 }
 
-
+#mobilelinks {
+  list-style-type: none;
+  z-index:100;
+}
 
 

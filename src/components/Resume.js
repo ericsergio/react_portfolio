@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import useWindowSize from './useWindowSize';
 
 export default function Resume() {
+
+
     const resumeStyle = {
         height:'100%',
         width:'100%',

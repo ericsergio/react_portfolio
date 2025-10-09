@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import meImg from '../../assets/meHS.jpeg';
+import meImg from '../assets/meHS.jpeg';
+import useWindowSize from './useWindowSize';
 
 export default function About() {
+
+
     const aboutStyle = {
         height:'100%',
         width:'100%'
@@ -29,12 +32,13 @@ export default function About() {
         zIndex:'6'
     }
 
-    const mobileID = {
+    const desktopID = {
         position:'absolute',
-        bottom:'5vh',
-        left:'35vw',
+        bottom:'0',
+        left:'45vw',
         fontSize:'3em',
-        color:'green',
+        color:'red',
+        zIndex:7
     }
     return (
         <div className = 'About' style = {aboutStyle}>
@@ -53,7 +57,7 @@ export default function About() {
                     I am proficient using cloud technologies and am in the final portion of completing the Google Cloud Cyber Security certification. Along with my technical skillset, I have a great deal of experience from working in a high-volume, fast-paced and high-stress restaurant environment, that includes teamwork, leadership, multi-tasking and more. Some of my hobbies include playing basketball, coaching my daughter’s soccer team, skateboarding, and everything involved from being a parent. 
                     I built this website from scratch and am hosting it via a Google Compute Engine virtual machine. Thank you for visiting!</span>
             </p>
-            <p style = {mobileID}>MOBILE ABOUT</p>
+            {/*<p style = {desktopID}>{isMobile} || {width} || {useWindowSize().height}</p>*/}
             </div>
     )
 }

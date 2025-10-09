@@ -5,6 +5,8 @@ function useWindowSize() {
         width: window.innerWidth,
         height: window.innerHeight,
     });
+    const breakpoint = 768;
+    const isMobile = window.innerWidth < breakpoint ? true : false;
 
     useEffect(() => {
         function handleResize() {
@@ -12,6 +14,7 @@ function useWindowSize() {
                 width:window.innerWidth,
                 height:window.innerHeight,
             });
+            
         }
 
         window.addEventListener('resize', handleResize);
@@ -21,7 +24,7 @@ function useWindowSize() {
         return () => window.removeEventListener('resize', handleResize);
     }, []); //empty dependency array means this effect runs only once on mount
 
-    return windowSize;
+    return isMobile;
 }
 
 export default useWindowSize;
