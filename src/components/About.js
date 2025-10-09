@@ -13,7 +13,7 @@ export default function About() {
         color:'rgb(255, 255, 255',
         fontSize:'1.3em',
         padding:'2%',
-        width: 'calc(100% - 25vw)',
+        width: 'calc(100% - 30vw)',
         margin: '6% 0 0 4%'
     }
     const pStyleLower = {
