@@ -22,14 +22,15 @@ import restAPIWide from './assets/exampleImages/restAPIWide.png';
 function App() {
   const topBarStyle = {
     margin:'0',
-    height:'100vh',
+    
   }
 
   const pageContainerStyle = {
-    position:'absolute',
-    top:'16vh',
+    position:'relative',
+    top:'1vh',
     left:'11vw',    
     minHeight:'70vh',
+    height:'auto',
     width:'78vw',
     boxShadow:'0 30px 20px rgba(0, 0, 0, 0.7)',
     borderRadius:'0 12% 0 0',

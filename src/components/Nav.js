@@ -14,10 +14,10 @@ const mainNavStyle = {
 }
 
 export default function Nav(props) {
-    const isMobile = useWindowSize();
+    const isMobile = useWindowSize().isMobile;
     
     const ulMobileStyle = {
-        position:'relative',
+        position:'fixed',
         width:'25vw',
         height:'20vh',
         marginTop:'-10px',

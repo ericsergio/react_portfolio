@@ -15,7 +15,7 @@ export default function Resume() {
 
 	
     return (
-        <div style = {resumeStyle}>            
+        <div className = "Resume" style = {resumeStyle}>            
 		        <table style = {{width:'100%'}}>
 				<tbody>
                     <tr>

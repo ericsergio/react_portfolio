@@ -6,20 +6,26 @@ import reclaimIcon from '../../src/assets/reclaimImg.png';
 import useWindowSize from './useWindowSize';
 
 export default function Projects() {
-
+    const isMobile = useWindowSize().isMobile;
 
     const projectsStyle = {
-        height:'75%',
+        height:'100%',
         width:'100%'        
     }
 
     const projListStyle = {
         position: 'relative',
 	    display:'grid',
-	    gridTemplateColumns:'repeat(auto-fit, minmax(40%, 1fr))',
-	    gridTemplateRows:'30vh',
+	    /*gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))',*/
+        gridTemplateColumns:'1fr, minmax(200px, 600px), 1fr',
+	    /*gridTemplateRows:'1fr 1fr 1fr 1fr .5fr',*/
+        gridTemplateRows:'repeat(1fr)',
+        
+        gridAutoRows:'39%',
+        rowGap:'100px',
 	    listStyleType: 'none',
-        margin: '5vw 0 0 7vw',
+        margin: '5vw 0 0 13vh',
+        padding:'10%',
     }
 
     const projListLi = {
