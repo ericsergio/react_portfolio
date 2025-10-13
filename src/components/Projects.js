@@ -8,21 +8,18 @@ import useWindowSize from './useWindowSize';
 export default function Projects() {
     const isMobile = useWindowSize().isMobile;
 
-    const projectsStyle = {
-        height:'100%',
-        width:'100%'        
+    const projectsStyle = {        
+        height:'auto',
+        width:'auto',
     }
 
     const projListStyle = {
         position: 'relative',
 	    display:'grid',
-	    /*gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))',*/
-        gridTemplateColumns:'1fr, minmax(200px, 600px), 1fr',
-	    /*gridTemplateRows:'1fr 1fr 1fr 1fr .5fr',*/
+        gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))',
         gridTemplateRows:'repeat(1fr)',
-        
-        gridAutoRows:'39%',
-        rowGap:'100px',
+        gridAutoRows:'20vh',
+        rowGap:'50px',
 	    listStyleType: 'none',
         margin: '5vw 0 0 13vh',
         padding:'10%',
@@ -30,12 +27,12 @@ export default function Projects() {
 
     const projListLi = {
         height:'15vh',
-        width:'15vh',
+        width:'15vh',        
     }
 
     const projListLiA = {
-        width:'100%',
-        height:'100%',
+        maxHeight:'100%',
+        maxWidth:'100%',
         display:'flex',
         flexDirection:'column',
         alignItems:'center',
@@ -50,8 +47,12 @@ export default function Projects() {
     }
 
     const projIcon = {
-        height:'100%',
-        width:'100%'
+        maxHeight:'100%',
+        maxWidth:'100%',
+        height:'auto',
+        width:'auto',
+        maxHeight:'80%',
+        maxWidth:'80%',
     }
     return (
         <div className = 'Projects' style = {projectsStyle}>
