@@ -21,7 +21,7 @@ export default function Projects() {
         gridAutoRows:'20vh',
         rowGap:'50px',
 	    listStyleType: 'none',
-        margin: '5vw 0 0 13vh',
+        margin: '5vw 0 0 9vh',
         padding:'10%',
     }
 

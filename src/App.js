@@ -33,7 +33,7 @@ function App() {
     height:'auto',
     width:'78vw',
     boxShadow:'0 30px 20px rgba(0, 0, 0, 0.7)',
-    borderRadius:'0 12% 0 0',
+    borderRadius:'0 0 0 0',
     background:'radial-gradient(circle at 90% 5%, rgba(0, 0, 0, 1) 2%, transparent 95%) 90% 25%, \
     radial-gradient(circle at 55% 5%, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, .7) 90%) 25% 5%, \
     radial-gradient(circle at 85% 55%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, .7) 90%) 5% 25%',
